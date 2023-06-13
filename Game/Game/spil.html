@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../Elements/heart.svg" />
+    <link rel="stylesheet" href="css/spil.css" />
+    <title> Bomb The Bandit </title>
+  </head>
+  <body>
+    <header>
+  
+    </header>
+
+    <main>
+
+      <div id="screen">
+
+        <div id="game">
+          <audio id="heartEffect">
+            <source src="../Elements/Fart.MP3" type="audio/mp3">
+          </audio>
+          <audio id="bombEffect">
+            <source src="../Elements/Explosion.MP3" type="audio/mp3">
+          </audio>
+          <audio id="backGroundOne">
+            <source src="../Elements/background1.MP3" type="audio/mp3">
+          </audio>
+          <audio id="winnerSong">
+            <source src="../Elements/WinningSong.MP3" type="audio/mp3">
+          </audio>
+          <audio id="loserSound">
+            <source src="../Elements/LoserMusic.MP3" type="audio/mp3">
+          </audio>
+
+
+
+          <div class="timer">20</div>
+          <div id="game_background"></div>
+          <div id="game_background2"></div>
+          <div id="game_elements">
+            <div id="heart_container1">
+              <div id="heart_sprite1"></div>
+            </div>
+            <div id="bomb_container1">
+              <div id="bomb_sprite1"></div>
+            </div>
+          </div>
+          <div id="game_foreground">
+            <div id="bandit_container" class="walking">
+              <div id="bandit_sprite" class="walkCycle"></div>
+            </div>
+          </div>
+          <div id="game_ui">
+            <div id="points"></div>
+            <div id="lives"></div>
+            <div id="timer"></div>
+          </div>
+        </div>
+        <div id="frontpage">
+          <h1 id="front">Bomb the Bandit</h1>
+          <div onclick="enterGame()" id="frontpageButton"> Enter </div>
+          <img src="../Elements/bandit.png" alt="bandit">
+          <img src="../Elements/bandit.png" class="bandittoimage" alt="bandit">
+        </div>
+
+        <div id="start">
+          <div id="instructions_btn" onclick="howTo()">How to play</div>
+          <div id="play1_btn" onclick="letsPlay()">Let's play</div>
+        </div>
+        <div id="instructions">
+          <h1>How to play</h1>
+          <div id="instructions_text">
+            <p>Click Bombs (1 point)</p>
+            <p>DO NOT click Hearts! (-1 life)</p>
+          </div>
+          <div id="play2_btn" onclick="letsPlay()">Let's play</div>
+        </div>
+        <div id="game_over">
+          <h1>Bandit survived.. </h1>
+          <div id="play_again1_btn" onclick="playAgain()">Play again</div>
+        </div>
+        <div id="level_complete">
+          <h1>You did it!</h1>
+          <div id="play_again2_btn" onclick="playAgain()">Play again</div>
+        </div> 
+        </div>
+
+  
+
+        
+    </main>
+
+    <footer></footer>
+
+    <script src="js/spil.js"></script>
+  </body>
+</html>

@@ -1,0 +1,350 @@
+@font-face {
+  font-family: Abel;
+  src: url("../font/Abel-Regular.woff");
+}
+
+#screen {
+  position: relative;
+  border: 2px solid black;
+  width: 95%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+#frontpageButton {
+  position: absolute;
+  font-size: 7cqw;
+  font-family: Abel;
+  border: rgb(21, 27, 1) 1px solid;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0 2%;
+  background-color: beige;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgb(33, 32, 32);
+  left: 60%;
+  top: 70%;
+}
+
+#start,
+#instructions {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+h1 {
+  color: rgb(215, 125, 204);
+  font-size: 10cqw;
+  filter: brightness(120%) drop-shadow(3px 3px 3px rgb(21, 27, 1));
+  width: 40%;
+  font-family: Abel;
+}
+#start h1,
+#instructions h1 {
+  position: absolute;
+  left: 18%;
+}
+#instructions h1 {
+  width: 60%;
+}
+#instructions p {
+  font-family: Abel;
+  font-size: 4cqw;
+  line-height: 2vw;
+  color: rgb(242, 218, 1);
+  text-shadow: 2px 2px 2px black;
+}
+#instructions_text {
+  position: absolute;
+  left: 20%;
+  top: 35%;
+}
+
+#instructions_btn, #play1_btn, #play2_btn,
+#play_again1_btn,
+#play_again2_btn {
+  position: absolute;
+  font-size: 7cqw;
+  font-family: Abel;
+  border: rgb(21, 27, 1) 1px solid;
+  width: max-content;
+  border-radius: 5px;
+  padding: 0 2%;
+  background-color: beige;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgb(33, 32, 32);
+}
+#instructions_btn {
+  left: 60%;
+  top: 50%;
+}
+
+#play1_btn,
+#play2_btn,
+#play_again1_btn,
+#play_again2_btn {
+  left: 60%;
+  top: 70%;
+}
+
+#game_background {
+  margin-top: -15%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../img/tag_white.png");
+
+  z-index: -10;
+}
+#game_background2 {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+#game_foreground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#game_over {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../img/tag_white.png");
+  background-size: contain;
+}
+#game_over h1,
+#level_complete h1 {
+  position: absolute;
+  left: 18%;
+  filter: brightness(120%) saturation(180%);
+  color: rgb(141, 212, 11);
+}
+
+#level_complete {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../img/tag_white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#bandit_container {
+  position: absolute;
+  bottom: -25%;
+  right: 17%;
+  height: 75%;
+  aspect-ratio: 1/2.8;
+}
+#bandit_sprite {
+  height: 100%;
+  width: 100%;
+  background-image: url("/Elements/bandit.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+#game_ui {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#points,
+#lives {
+  width: 7%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 3px rgb(102, 9, 9) solid;
+  position: absolute;
+  top: 80%;
+  background-color: black;
+  color: beige;
+  font-family: Abel;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4cqw;
+}
+#points {
+  left: 20%;
+  bottom: 100%;
+}
+#lives {
+  right: 20%;
+}
+
+#heart_container1 {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 1/1;
+}
+#heart_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+
+}
+
+#bomb_container1 {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 1/2.3;
+}
+#bomb_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bomb.svg);
+  background-repeat: no-repeat;
+}
+
+
+.falling1 {
+  animation-name: falling;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  left: 40%;
+
+}
+
+.falling2 {
+  animation-name: falling;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  left: 40%;
+}
+
+.walking {
+  animation-name: walking;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.walkCycle {
+  animation-name: walkCycle;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.freeze {
+  animation-play-state: paused;
+}
+.disAppear {
+  animation-name: disAppear;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.hide {
+  display: none;
+}
+
+@keyframes falling {
+  100% {
+    translate: 0 700%;
+  }
+}
+@keyframes flying {
+  100% {
+    translate: 1200% 0;
+  }
+}
+@keyframes walking {
+  0% {
+    translate: 0 0;
+    scale: 1;
+    transform: scaleX(1);
+    z-index: 0;
+  }
+  30% {
+    translate: -130% -48%;
+    scale: 0.34;
+    transform: scaleX(1);
+    z-index: -1;
+  }
+  45% {
+    translate: -210% -48%;
+    scale: 0.35;
+    transform: scaleX(1);
+  }
+  75% {
+    translate: -340% 0%;
+    scale: 1;
+    transform: scaleX(1);
+    z-index: 0;
+  }
+  75.5% {
+    translate: -320% 0%;
+    scale: 1;
+    transform: scaleX(-1);
+  }
+  99.5% {
+    translate: 0 0;
+    scale: 1;
+    transform: scaleX(-1);
+  }
+  100% {
+    translate: 0 0;
+    scale: 1;
+  }
+}
+@keyframes walkCycle {
+  to {
+    translate: 0 1%;
+  }
+}
+@keyframes disAppear {
+  to {
+    scale: 0;
+    rotate: 3turn;
+  }
+}
+
+#frontpage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#bandittoimage {
+  width: 100px;
+    height: 100px;
+}
+
+.timer {
+  font-size: 48px;
+  text-align: center;
+}
+

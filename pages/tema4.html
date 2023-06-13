@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../styling/tema4.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="../logo.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="/pages/about.html"> Om Mig </a>
+                    </li>
+                    <li>
+                        <a href="temakollektion.html"> Tema Kollektion </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <h1 class="discover"> Tema 4: Hover to Discover</h1>
+
+    <div class="grid-layout">
+        <div class="card">
+            <img src="../imgvid/tema4_materiale/rentegning.webp" alt="rentegning" class="card-img2">
+            <div class="card-body">
+                <h1 class="card-title"> Tema 4 </h1>
+                <p class="card-sub-title"> Grundlœggende Animation </p>
+                <p class="card-info"> 
+                    Vi fik nu lov til at prøve krœfter af med grundlœggende Animation
+                    <br>
+                    Vi lœrte at lave vores eget spil ved at bruge javascript, hvilket helt klart var med til at
+                    gøre dette Tema til det mest udfordrende og lœrerige hidtil.
+                    Det endelige resultat blev af denne årsag med fokus på funktionalitet fremfor udseende.
+                <br>
+                </p>
+            </div>
+        </div>
+   
+        <div class="card">
+            <img src="../imgvid/tema4_materiale/bandit.webp" alt="bandit" class="card-img">
+            <div class="card-body">
+                <h1 class="card-title"> Ide </h1>
+                <p class="card-sub-title"> Ideen bag spillet </p>
+                <p class="card-info"> 
+                    Ideen bag spillet var mere simpel end selve udførelsen.
+                    <br>
+                    Bomb banditten i stykket og undgå at ramme hjerterne da disse vil give ham hans liv tilbage.
+
+                </p>
+                <button class="card-btn" id="ideapopup"> Se Ide </button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="../imgvid/tema4_materiale/bomb.webp" alt="dogshirt" class="card-img">
+            <div class="card-body">
+                <h1 class="card-title"> Spil </h1>
+                <p class="card-sub-title"> Udarbejdelse af Spil </p>
+                <p class="card-info"> 
+                    Spillet blev lavet med et formål: Kill the bandit.
+                    <br>
+                    Ved brug af EventListeners kunne man detecte når brugeren trykkede på hhv. hjertet eller bomben 
+                    og det var med til enten af give point eller liv.
+                    En masse variabler, funktioner osv. Der bare var med til at gøre tingene super udfordrende at holde
+                    styr på.
+                <br>
+                Se og prøv det fulde spil her
+                </p>
+                <button class="card-btn" id="koncept"> Se Spil </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../scripts/tema4.js"> </script>
+    <script src="../header.js"></script>
+</body>
+</html>
